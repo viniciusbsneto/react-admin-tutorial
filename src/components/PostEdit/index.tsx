@@ -10,7 +10,7 @@ const PostEdit: React.FC<EditProps> = (props) => {
           <SelectInput optionText="name" />
         </ReferenceInput>
         <TextInput source="title" />
-        <TextInput source="body" />
+        <TextInput source="body" multiline />
       </SimpleForm>
     </Edit>
   );
