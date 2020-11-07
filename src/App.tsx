@@ -1,5 +1,5 @@
 import React from 'react';
-import { Admin, Resource } from 'react-admin';
+import { Admin, Resource, ListGuesser } from 'react-admin';
 import jsonServerProvider from 'ra-data-json-server';
 import UserList from './components/UserList';
 
@@ -9,6 +9,7 @@ const App: React.FC = () => {
   return (
     <Admin dataProvider={dataProvider}>
       <Resource name="users" list={UserList} />
+      <Resource name="posts" list={ListGuesser} />
     </Admin>
   );
 }
