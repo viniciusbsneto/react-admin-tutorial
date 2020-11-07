@@ -5,10 +5,10 @@ const PostEdit: React.FC<EditProps> = (props) => {
   return (
     <Edit {...props}>
       <SimpleForm>
+        <TextInput source="id" />
         <ReferenceInput source="userId" reference="users">
           <SelectInput optionText="id" />
         </ReferenceInput>
-        <TextInput source="id" />
         <TextInput source="title" />
         <TextInput source="body" />
       </SimpleForm>
