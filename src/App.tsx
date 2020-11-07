@@ -1,7 +1,16 @@
 import React from 'react';
+import { Admin, Resource } from 'react-admin';
+import jsonServerProvider from 'ra-data-json-server';
+import UserList from './components/UserList';
 
-function App() {
-  return <h1>react-admin tutorial</h1>
+const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
+
+const App: React.FC = () => {
+  return (
+    <Admin dataProvider={dataProvider}>
+      <Resource name="users" list={UserList} />
+    </Admin>
+  );
 }
 
 export default App;
