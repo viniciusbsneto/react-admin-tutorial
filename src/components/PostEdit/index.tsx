@@ -7,7 +7,7 @@ const PostEdit: React.FC<EditProps> = (props) => {
   return (
     <Edit title={<PostTitle />} {...props}>
       <SimpleForm>
-        <TextInput source="id" />
+        <TextInput disabled source="id" />
         <ReferenceInput source="userId" reference="users">
           <SelectInput optionText="name" />
         </ReferenceInput>
