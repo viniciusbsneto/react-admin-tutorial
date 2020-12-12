@@ -8,13 +8,11 @@ import PostCreate from './components/PostCreate';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
-const App: React.FC = () => {
-  return (
-    <Admin dataProvider={dataProvider}>
-      <Resource name="users" list={UserList} />
-      <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} />
-    </Admin>
-  );
-}
+const App: React.FC = () => (
+  <Admin dataProvider={dataProvider}>
+    <Resource name="users" list={UserList} />
+    <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} />
+  </Admin>
+);
 
 export default App;
