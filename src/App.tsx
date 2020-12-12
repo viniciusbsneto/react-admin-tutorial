@@ -8,11 +8,12 @@ import UserList from './components/Users/UserList';
 import PostList from './components/Posts/PostList';
 import PostEdit from './components/Posts/PostEdit';
 import PostCreate from './components/Posts/PostCreate';
+import Dashboard from './components/Dashboard';
 
 const dataProvider = jsonServerProvider('https://jsonplaceholder.typicode.com');
 
 const App: React.FC = () => (
-  <Admin dataProvider={dataProvider}>
+  <Admin dashboard={Dashboard} dataProvider={dataProvider}>
     <Resource name="users" list={UserList} icon={UserIcon} />
     <Resource name="posts" list={PostList} edit={PostEdit} create={PostCreate} icon={PostIcon} />
   </Admin>
